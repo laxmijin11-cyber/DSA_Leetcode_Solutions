@@ -27,7 +27,10 @@ public:
         
         for (int right = 0; right < nums.size(); right++) {
             if (nums[right] != 0) {
-                swap(nums[left], nums[right]);
+                // swap(nums[left], nums[right]);
+                int temp=nums[left];
+                nums[left]=nums[right];
+                nums[right]=temp;
                 left++;
             }
         }
