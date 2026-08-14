@@ -12,11 +12,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/laxmijin11-cyber/SQL_Leetcode_Solutions/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0283-move-zeroes](https://github.com/laxmijin11-cyber/SQL_Leetcode_Solutions/tree/master/0283-move-zeroes) |
 | [0977-squares-of-a-sorted-array](https://github.com/laxmijin11-cyber/SQL_Leetcode_Solutions/tree/master/0977-squares-of-a-sorted-array) |
+| [2461-maximum-sum-of-distinct-subarrays-with-length-k](https://github.com/laxmijin11-cyber/SQL_Leetcode_Solutions/tree/master/2461-maximum-sum-of-distinct-subarrays-with-length-k) |
 ## Hash Table
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/laxmijin11-cyber/SQL_Leetcode_Solutions/tree/master/0001-two-sum) |
 | [0141-linked-list-cycle](https://github.com/laxmijin11-cyber/SQL_Leetcode_Solutions/tree/master/0141-linked-list-cycle) |
+| [2461-maximum-sum-of-distinct-subarrays-with-length-k](https://github.com/laxmijin11-cyber/SQL_Leetcode_Solutions/tree/master/2461-maximum-sum-of-distinct-subarrays-with-length-k) |
 ## Linked List
 |  |
 | ------- |
@@ -56,5 +58,9 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/laxmijin11-cyber/SQL_Leetcode_Solutions/tree/master/0011-container-with-most-water) |
+## Sliding Window
+|  |
+| ------- |
+| [2461-maximum-sum-of-distinct-subarrays-with-length-k](https://github.com/laxmijin11-cyber/SQL_Leetcode_Solutions/tree/master/2461-maximum-sum-of-distinct-subarrays-with-length-k) |
 <!---LeetCode Topics End-->uestions to ace the coding interview! - Created using [LeetHub v2](https://github.com/arunbhardwaj/LeetHub-2.0)
 <!---LeetCode Topics Start-->
