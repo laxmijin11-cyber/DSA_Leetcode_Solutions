@@ -17,3 +17,5 @@ public:
         return maxAvg!=INT_MIN?maxAvg:0;
     }
 };
+
+//TO TRACK THE SLIDING WINDOW SIZE:USE RIGHT-LEFT+1==K
