@@ -26,3 +26,4 @@ public:
         return ans;
     }
 };
+//assign karne ke liye value honi chahiye in ans[i]=m[nums1[i]];
