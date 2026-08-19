@@ -1,25 +1,19 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        // Create an unordered_map to store the number and its index
-        unordered_map<int, int> numMap;
-
-        // Iterate through the array
+        unordered_map<int, int> m;
+        vector<int> ans;
         for (int i = 0; i < nums.size(); i++) {
-            // Calculate the complement needed to reach the target
-            int complement = target - nums[i];
-
-            // Check if the complement exists in the map
-            if (numMap.find(complement) != numMap.end()) {
-                // If found, return the indices of the complement and the current number
-                return {numMap[complement], i};
+            int first = nums[i];
+            int second = target - nums[i];
+            if (m.find(second) != m.end()) {
+                // found if end iterator not coming
+                ans.push_back(i);
+                ans.push_back(m[second]);
+                break;
             }
-
-            // Otherwise, store the current number and its index in the map
-            numMap[nums[i]] = i;
+            m[first] = i;
         }
-
-        // The problem guarantees a solution, but we return an empty vector just in case
-        return {};
+        return ans;
     }
 };
