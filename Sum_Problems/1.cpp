@@ -89,3 +89,46 @@ The `set<vector<int>> uniqueTriplets` **deduplicates identical triplets** (by so
 `[-4, 2, 2]` is invalid because the numbers `2` and `2` are **not present as a valid `(j, k)` pair** for the starting element `-4` in the original array order. They are physically *before* `-4` in the array.
 
 */
+
+//2POINTER APPROACH
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        // 2pointer approach
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        vector<vector<int>> ans;
+        for (int i = 0; i < n; i++) {
+            if(i>0 && nums[i]==nums[i-1]){continue;}
+            int j = i + 1, k = n - 1;
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+                if (sum < 0) {
+                    j++;
+                } else if (sum > 0) {
+                    k--;
+                } else {
+                    ans.push_back({nums[i], nums[j], nums[k]});
+                    j++;
+                    k--;
+                    while (j < k && nums[j] == nums[j - 1]) {
+                        j++;
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+};
+/*
+You are **very close**, but there is a **logical bug** in your first `while` loop that will cause an **Infinite Loop**.
+
+Look at this:
+```cpp
+while(i>0 && nums[i]==nums[i-1]){continue;}
+```
+
+**Why this is a bug:** 
+If `nums[i]` equals `nums[i-1]`, you enter the loop, hit `continue`, and go back to the top. But **`i` never changes!** It just keeps checking `nums[i] == nums[i-1]` forever, and the loop never progresses
+
+If sum == 0: We found a perfect match! But we cannot move just one pointer. If we move only j++, the sum becomes too big (because the array is sorted). If we move only k--, the sum becomes too small. To continue looking for new triplets, we must abandon BOTH numbers and move both pointers inward.*/
