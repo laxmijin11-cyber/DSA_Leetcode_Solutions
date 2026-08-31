@@ -1,22 +1,16 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        string cleaned="";
-        for(char ch:s){
-            if(isalnum(ch)){
-                cleaned+=tolower(ch); 
+        int i=0,j=s.size()-1;
+        while(i<j){
+            while(i<j && !isalnum(s[i])){i++;}
+            while(i<j && !isalnum(s[j])){j--;}
+            if(tolower(s[i])!=tolower(s[j])){
+                return false;        
             }
-        }
-        int n=cleaned.length();
-        for(int i=0;i<n/2;i++){
-            if(cleaned[i]!=cleaned[n-1-i]){
-                return false;
-            }
+            i++;
+            j--;
         }
         return true;
     }
 };
-
-//upper to lower===toLowerCase()
-//remove all alpha numeric pairs===regex==(" ")
-// s.replaceAll("[^a-z0-9]","")----^ is not operator.
